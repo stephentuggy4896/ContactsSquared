@@ -1,0 +1,15 @@
+﻿/* pt_sansbold font */
+@font-face {
+    font-family: 'pt_sansbold';
+    src: url('../fonts/pt-sans-fontfacekit/PTS75F-webfont.eot');
+    src: url('../fonts/pt-sans-fontfacekit/PTS75F-webfont.eot?#iefix')
+            format('embedded-opentype'),
+    url('../fonts/pt-sans-fontfacekit/PTS75F-webfont.woff') 
+            format('woff'),
+    url('../fonts/pt-sans-fontfacekit/PTS75F-webfont.ttf')
+            format('truetype'),
+    url('../fonts/pt-sans-fontfacekit/PTS75F-webfont.svg#pt_sansvold')
+        format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

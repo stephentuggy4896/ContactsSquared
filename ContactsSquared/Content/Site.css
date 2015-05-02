@@ -1,0 +1,125 @@
+﻿body {
+    font-family: 'pt_sansbold';
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #faf9f9;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* -------------------------------------------- Style For Navigation -------------------------------------------- */
+.navbar-inverse {
+  background-color: #faf9f9;
+  border-color: #faf9f9;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: #333333;
+}
+
+.navbar-toggle {
+  background-color: #000;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #4f4d6a;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #0713ae;
+}
+
+/* -------------------------------------------- Style for Search Box -------------------------------------------- */
+.search {
+    max-width: 100%;
+}
+
+
+
+/* -------------------------------------------- Style for Profile page -----------------------------------------  */
+.profile-image {
+    margin: auto;
+    display: block;
+}
+
+.icon-space {
+    margin: 0px 5px 0px 0px; 
+}
+
+.contact-style {
+    margin: 20px;
+    list-style: none;
+}
+
+.contact-style li:nth-child(2) {
+    margin: 10px 0px;
+}
+
+.contact-style li ol {
+    list-style: none;
+    -webkit-padding-start: 30px;
+}
+
+ul, menu, dir {
+  -webkit-padding-start: 0px;
+}
+
+/* -------------------------------------------- Style for ProfileEdit page ------------------------------  */
+.contact-style2 li ol {
+    list-style: none;
+    -webkit-padding-start: 0px;
+}
+
+
+/* -------------------------------------------- Media queries -------------------------------------------- */
+@media(max-width:767px){
+
+}
+@media(min-width:768px){
+/* ------------------------------------ Media Queries Style For Navigation ------------------------------- */
+   
+
+/* ---------------------------------- Media Queries Style for Profile page ------------------------------  */
+    .profile-image {
+        margin: 0px;
+    }
+    .contact-style {
+        margin: 0px;
+    }
+    .contact-style li {
+        width: 200px;
+        height: 60px;
+        margin: auto;
+        float: left;
+        display: block;
+
+    }
+    .contact-style li:nth-child(2) {
+        margin: 0px;
+    }
+}
+@media(min-width:992px){
+    .contact-style li {
+        width: 175px;
+    }
+
+}
+@media(min-width:1200px){
+
+}

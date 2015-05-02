@@ -1,0 +1,69 @@
+﻿/* ---------------------------------- Style for alphabet Navigation ---------------------------------- */
+.alphabet {
+    list-style-type: none;
+    margin: 20px 0 0;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    text-align:center;
+}
+
+.alphabet li {
+    float:left;
+    margin:0;
+    padding:0;
+    font-size: 13px;
+    -moz-box-sizing:border-box;
+    color:black;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    width:3.84%;
+}
+
+.alphabet li:last-child {
+    border-right: none;
+}
+
+.alphabet li:hover {
+    color:green;
+    background-color: lightgrey;
+}
+
+
+/* -------------------------------------- Style for People Page ------------------------------------- */
+.people {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    list-style: none;
+    display: block;
+    float: left;
+    
+}
+.people li {
+    width: 90px;
+    height: 60px;
+    display: block;
+}
+.profile-icon {
+    margin: auto;
+    display: block;
+}
+
+.profile-txt {
+    text-align: left;
+    display: block;
+}
+
+/* -------------------------------------- Style for Social Media Icons ------------------------------------- */
+.social-media {
+    width: 100%;
+    list-style: none;
+}
+.social-media li {
+    width: auto;
+    margin: 20px;
+    float: left;
+}
