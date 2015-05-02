@@ -25,9 +25,16 @@ textarea {
     max-width: 280px;
 }
 
+.contact-details {
+    color: #000;
+    font-size: 16px;
+    position:relative;
+    top: 15%;
+}
+
 /* -------------------------------------------- Style For Navigation -------------------------------------------- */
 .navbar-inverse {
-  background-color: #faf9f9;
+  background-color: #000;
   border-color: #faf9f9;
 }
 

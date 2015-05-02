@@ -1,58 +1,118 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Person.aspx.cs" Inherits="ContactsSquared.Person" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <hr />
-<div class="row">
-    <!-- Profile image for user 160 x 160 pixels -->
-    <div class="col-xs-12 col-sm-3 col-md-2">
-        <img src="images/img-person-profile.png" class="img-responsive profile-image" />
-    </div>
+    <div class="row">
+        <!-- Profile image for user 160 x 160 pixels -->
+        <div class="col-xs-12 col-sm-3 col-md-2">
+            <img src="images/img-person-profile.png" class="img-responsive profile-image" />
+        </div>
     
-    <div class="col-xs-12 col-sm-9 col-md-10">
-        <!-- contact-style located in Site.css -->
-        <ul class="contact-style">
-            <!-- Name of Person -->
-            <li>
-                <asp:Label runat="server"><img src="images/icon_phone.png" class="icon-space" />Name</asp:Label>
-                    <ol>
-                        <li><asp:Label runat="server">John Doe</asp:Label></li>
-                    </ol>
-            </li>
-            <!-- Phone Number of Person -->
-            <li>
-                <asp:Label runat="server"><img src="images/icon_phone.png" class="icon-space" />Phone Number</asp:Label>
-                <ol>
-                    <li>
-                        <asp:Label runat="server">559-869-9600</asp:Label>
-                    </li>
-                </ol>
-            </li>
-            <!-- Cellphone Number of Person -->
-            <li>
-                <asp:Label runat="server"><img src="images/icon_phone.png" class="icon-space" />CellPhone Number</asp:Label>
-                <ol>
-                    <li>
-                        <asp:Label runat="server">559-869-9600</asp:Label>
-                    </li>
-                </ol>
-            </li>
-            <!-- Email of Person -->
-            <li>
-                <asp:Label runat="server"><img src="images/icon_phone.png" class="icon-space" />Email</asp:Label>
-                <ol>
-                    <li><asp:Label runat="server">JohnDoe@gmail.com</asp:Label></li>
-                </ol>
-            </li>
 
-            <!-- Address of Person -->
-            <li>
-                <asp:Label runat="server"><img src="images/icon_phone.png" class="icon-space" />Home Address</asp:Label>
-                <ol>
-                    <li><asp:Label runat="server">893 Vineyard Way<br />Kingsburg, CA 96786</asp:Label></li>
-                </ol>
-            </li>
-        </ul>
-    </div>
+    <asp:TextBox ID="PersonNameTextBox" runat="server" style="float: left">Name</asp:TextBox>
+    <br />
+    <h2 class="contact-details">Phone #'s</h2>
+
+    <asp:Button ID="AddNumber"
+        Text="Add Phone #"
+        
+        runat="server" />
+    
+    <asp:GridView ID="PhoneNumberGridView"
+        autogeneratecolumns="false"
+        emptydatatext="No data available."
+        CssClass="contact-details"
+        runat="server">
+        <columns>
+            <asp:BoundField DataField="PhoneNumberTypeOne" HeaderText="Phone # Type 1" />
+            <asp:BoundField DataField="PhoneNumberTypeTwo" HeaderText="Phone # Type 2" />
+            <asp:BoundField DataField="PhoneNumber" HeaderText="Phone #" />
+        </columns>
+    </asp:GridView>
+
+    <asp:Button ID="DelNumber"
+        Text="Delete Phone #"
+        
+        runat="server" />
+
+    <h2>Email's</h2>
+
+    <asp:Button ID="AddEmail"
+        Text="Add Email Address"
+        
+        runat="server" />
+
+    <asp:GridView ID="EmailGridView"
+        autogeneratecolumns="false"
+        emptydatatext="No data available."
+        runat="server"
+        CssClass="contact-details">
+        <columns>
+            <asp:BoundField DataField="EmailTypeOne" HeaderText="Email Type 1" />
+            <asp:BoundField DataField="EmailTypeTwo" HeaderText="Email Type 2" />
+            <asp:BoundField DataField="Email" HeaderText="Email" />
+        </columns>
+    </asp:GridView>
+
+    <asp:Button ID="DelEmail"
+        Text="Delete Email Address"
+        
+        runat="server" />
+    
+    <h2>Addresses</h2>
+
+    <asp:Button ID="AddAddress"
+        Text="Add Address"
+        
+        runat="server" />
+
+     <asp:GridView ID="AddressGridView"
+        autogeneratecolumns="false"
+        emptydatatext="No data available."
+        runat="server"
+        CssClass="contact-details">
+        <columns>
+
+            <asp:BoundField DataField="AddressTypeOne" HeaderText="Address Type 1" />
+            <asp:BoundField DataField="AddressTypeTwo" HeaderText="Address Type 2" />
+            <asp:BoundField DataField="Address" HeaderText="Address" />
+       
+             </columns>
+    </asp:GridView>
+
+    <asp:Button ID="DelAddress"
+        Text="Delete Address"
+        
+        runat="server" />
+
+    <h2>Websites</h2>
+    
+    <asp:Button ID="AddWeb"
+        Text="Add Website"
+        
+        runat="server" />
+
+     <asp:GridView ID="WebSitesGridView"
+        autogeneratecolumns="false"
+        emptydatatext="No data available."
+        CssClass="contact-details"
+        runat="server">
+        <columns>
+            <asp:BoundField DataField="WebSiteTypeOne" HeaderText="Website Type 1" />
+            <asp:BoundField DataField="WebSiteTypeTwo" HeaderText="Website Type 2" />
+            <asp:BoundField DataField="WebSiteurl" HeaderText="URL" />
+        </columns>
+    </asp:GridView>
+
+    <asp:Button ID="DelWebsite"
+        Text="Delete Website"
+       
+        runat="server" />
+
+
+
 </div>
+    
+    
 
 <hr />
 
@@ -70,5 +130,5 @@
             <li><img src="images/social_pinterest_circle.png" /></li>
         </ul>
     </div>
-</div>
+</div>  
 </asp:Content>
