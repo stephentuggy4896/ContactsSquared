@@ -82,7 +82,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; 2015 - Joshua Weston, Stephen Tuggy, and Jose Cabreras Jr.</p>
+                <p>&copy; 2015 - Stephen Tuggy, Jose Cabrera Jr., and Joshua Weston</p>
             </footer>
         </div>
     </form>
