@@ -11,7 +11,7 @@ namespace ContactsSquared
 {
 
 
-    public partial class Contact
+    public partial class ContactDevs
     {
     }
 }

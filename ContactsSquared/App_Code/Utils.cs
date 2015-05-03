@@ -3,42 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-using MongoDB.Driver;
 using System.Security;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace ContactsSquared.App_Code
 {
-    public class MongoDBfx
+    public class Utils
     {
-        private const string masterDBName = "ContactsSquaredMaster";
         private const int saltLength = 128 / 8;
 
-        private static readonly MongoClient client = new MongoClient();
+        public static void MyRedirect(string destUrl)
+        {
+            HttpContext.Current.Response.Redirect(destUrl, false);
+            HttpContext.Current.ApplicationInstance.CompleteRequest();
+        }
         
-        public static async void RegisterNewUserAsync(string userID, string pswd)
-        {
-            //var client = new MongoClient();
-            var masterDB = client.GetDatabase(masterDBName);
-
-            string userDBName = DBNameForUser(userID);
-            var userDB = client.GetDatabase(userDBName);
-            var user = new User { Name = userID, HashedPassword = HashPassword(pswd), DBName = userDBName };
-            var userCollection = masterDB.GetCollection<User>("users");
-            await userCollection.InsertOneAsync(user);
-        }
-
-        private static string DBNameForUser(string userID)
-        {
-            return userID.Replace('@', '_').Replace('.', '_');
-        }
-
-        private static byte[] HashPassword(string pswd)
+        public static byte[] HashPassword(string pswd)
         {
             byte[] salt = CreateSalt(saltLength);
             byte[] hashedPswd = Hash(pswd, salt);
             return salt.Concat(hashedPswd).ToArray();
+        }
+
+        public static bool ConfirmPassword(string triedPassword, byte[] storedHashedPswd)
+        {
+            byte[] salt = storedHashedPswd.Take(saltLength).ToArray();
+            byte[] hashOfTriedPassword = Hash(triedPassword, salt);
+
+            return storedHashedPswd.SequenceEqual(hashOfTriedPassword);
         }
 
         private static byte[] CreateSalt(int size)
@@ -51,7 +44,7 @@ namespace ContactsSquared.App_Code
             // Return a Base64 string representation of the random number.
             return buff;
         }
-        
+
         private static byte[] Hash(string value, byte[] salt)
         {
             return Hash(Encoding.UTF8.GetBytes(value), salt);

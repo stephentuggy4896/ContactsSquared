@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ContactsSquared
 {
-    public partial class Contact : Page
+    public partial class ContactDevs : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

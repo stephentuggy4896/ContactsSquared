@@ -170,7 +170,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="ContactDevs.aspx" />
     <Content Include="Content\alphabet.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -376,12 +376,16 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
-    <Content Include="App_Code\MongoDBfx.cs" />
+    <Content Include="App_Code\InterfaceToNoSql.cs" />
     <Content Include="App_Code\User.cs" />
     <Content Include="App_Code\Contact.cs" />
     <Content Include="App_Code\Person.cs" />
     <Content Include="App_Code\Group.cs" />
-    <Content Include="App_Code\GroupMembership.cs" />
+    <Content Include="App_Code\Person_Group_Connection.cs" />
+    <Content Include="App_Code\Address.cs" />
+    <Content Include="App_Code\ContactMethod.cs" />
+    <Content Include="App_Code\Utils.cs" />
+    <Content Include="App_Code\Contact_ContactMethod_Connection.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -393,12 +397,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="ContactDevs.aspx.cs">
+      <DependentUpon>ContactDevs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="ContactDevs.aspx.designer.cs">
+      <DependentUpon>ContactDevs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
